@@ -8,12 +8,8 @@ import java.util.Scanner;
 public class Game {
     private Random random = new Random(); 
     public void filmsHistogram(String films[]) {
-        // System.out.println("title\t\t\tnumber of symbols\tHistogram"); //need to
-        // print it out depends on quantity of symbols
         for (String i : films) {
             String film = i;
-            // System.out.printf("\n%12s %5d \t\t\t\t\t", i, i.length() ); ////need to print
-            // it out depends on quantity of symbols
             System.out.print("\n" + i + " " + i.length() + " ");
             for (int j = 0; j < film.length(); j++) {
                 if (j == film.length() - 1) {
@@ -31,13 +27,6 @@ public class Game {
             System.out.println(i);
         }
 
-    }
-
-    public boolean openString(String s) {
-        if (s.isEmpty())
-            return false;
-        else
-            return true;
     }
 
     public String wordToUnderscore(String word) {
@@ -61,13 +50,10 @@ public class Game {
         char[] wrongLetters = new char[30];
         int wrongGuesses = 0, tries = 0;
 
-        // System.out.println(film);
         film = wordToUnderscore(film);
-        // System.out.println(film);
 
         Scanner scanner = new Scanner(System.in);
         StringBuilder tempFilm = new StringBuilder(film);
-        // StringBuffer tempFilm = new StringBuffer(thisFilm); //used originally
         System.out.println("\n\n\t\t\t*** LET THE FILM GUESSING GAME BEGIN!!! ***\n");
         System.out.print("enter the letter: ");
         String c = scanner.nextLine();
@@ -77,7 +63,6 @@ public class Game {
             tries++;
             if (originalFilm.indexOf(q) == -1) {
                 wrongGuesses++;
-                // System.out.println("no " + q + " in " + originalFilm);
                 System.out.println("Title of the film does not contain the letter \"" + q + "\"");
 
                 boolean b = true;

@@ -9,7 +9,7 @@ public class Main {
 
         Game game = new Game();
 
-        // game.filmsHistogram(films); //films from here
+        game.filmsHistogram(films); //films from here
 
         System.out.println(game.isFileCanBeOpened()); // check if file is open
 
